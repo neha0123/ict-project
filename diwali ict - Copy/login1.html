@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+	function form_validate()
+{
+	var username= document.forms["myform"]["username"].value;
+		var type=document.forms["myform"]["user-type"].value;
+    var password= document.forms["myform"]["password"].value;
+    if(type=="Teacher")
+        {
+        if(username=='')
+			{
+				alert("Name must be filled out");
+				return false;
+			}
+			else if(username=="himanshi")
+			{
+				
+				if(password=='')
+				{
+					alert("Password must be filled out");
+					return false;
+				}
+				else if(password!="himi")
+				{
+					alert("Invalid ID or Password");
+				}
+				else 
+				{
+					window.open('teacher.html');
+				}
+			}
+			else
+			{
+				alert("Invalid ID or Password");
+			}
+        }
+    else{
+        if(username=='')
+			{
+				alert("Name must be filled out");
+				return false;
+			}
+			else if(username=="neha")
+			{
+				
+				if(password=='')
+				{
+					alert("Password must be filled out");
+					return false;
+				}
+				else if(password!="neha")
+				{
+					alert("Invalid ID or Password");
+				}
+				else 
+				{
+					window.open('attendanceportal.html');
+                    alert("Success!");
+				}
+			}
+			else
+			{
+				alert("Invalid ID or Password");
+			}
+        }
+        
+}
+
+</script>
+
+
+</head>
+
+<body>
+    <center><h1><u>Attendance management</u></h1></center>
+    
+    
+	<div class="login-box" name="lg"> 
+		<h1> LOGIN </h1>
+			<form onsubmit="return form_validate()" name="myform">
+				
+				<div class="drop-box">
+					<select name="user-type">
+						<option value="Teacher">Teacher</option>
+	    				<option value="User">User</option>
+					</select>
+				</div>
+
+				<div class="textbox" >
+					<input type="text" placeholder="Username" name="username" value="" required>
+				</div>
+                               
+
+				<div class="textbox">
+					<input type="password" placeholder="Password" name="password" value="" required>
+				</div>
+
+				<input class="button" type="submit" value="Sign in" >
+			</form>
+	</div>
+
+
+</body>
+</html>

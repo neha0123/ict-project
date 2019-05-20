@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add subject</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+	function form_validate()
+{
+	var username= document.forms["myform"]["subject_name"].value;
+			if(subject_name=='')
+			{
+				alert("Name must be filled out");
+				return false;
+			}
+			var = document.forms["myform"]["subject_id"].value;
+			if(subject_id=='')
+			{
+				alert("Password must be filled out");
+				return false;
+			}
+			else
+			{
+				alert("Success!");
+				
+			}
+}
+
+</script>
+
+
+</head>
+
+<body>
+	<div class="login-box" name="lg"> 
+		<h1> Add Subject </h1>
+			<form onsubmit="return form_validate()" name="myform">
+				<div class="textbox" >
+					<input type="text" placeholder="Department" name="Department" value="" required>
+				</div>
+
+				<div class="textbox" >
+					<input type="text" placeholder="Subject_id" name="Subject_id" value="" required>
+				</div>
+
+				<div class="textbox" >
+					<input type="text" placeholder="subject_name" name="subject_name" value="" required>
+				</div>
+
+				<input class="button" type="submit" value="Add Subject" onclick="return form_validate()" >
+			</form>
+	</div>
+
+
+</body>
+</html>
